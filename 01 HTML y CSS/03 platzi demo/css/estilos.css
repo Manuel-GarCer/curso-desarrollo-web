@@ -1,0 +1,215 @@
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;    
+}
+
+/* ⚡⚡ CONSTANTES ⚡⚡ */
+.contenedor{
+    width: 80%;
+    margin-left: auto; /* centrado izq */
+    margin-right: auto; /* centrado der */
+ }
+
+/* ⚡⚡ NAV ⚡⚡ */
+nav{
+    background-color: #273b47;
+    display: flex; /* en linea logo y nombres */
+    justify-content: space-between;  /* separar logo (iz) y nombres (der) */
+    align-items: center;
+    padding: 10px;
+}
+nav img{ /* solo para el logo de platzi */
+    width: 100px;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* para los nombres uno al lado del otro */
+    align-items: center;
+}
+nav ul li {
+    /* border-right: 2px solid white ; */
+}
+
+.borde-derecho{
+
+    border-right: 2px solid white 
+}
+
+nav ul li a{  /* a es etiqueta inline */
+     /* color blanco; */
+     /* color: rgb(255,255,255); */
+    color: white;
+    text-decoration: none;
+    padding: 0 20px ; /* del nombre (para la manito) */ 
+    /* background-color: #9b59b6; */
+    display: inline-block;   /*para la etiqueta se adapte al contenedor */ 
+
+}
+#sesion{
+    background-color: red;
+    padding: 5px 20 px;
+    border-radius: 5px;
+}
+
+nav div {
+    color: white;
+    font-size: 25px;
+    border: 1px solid white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+nav div:hover{
+    background-color: white;
+    color: black;
+}
+
+/* ⚡⚡ SECCIÓN ⚡⚡ */
+
+.portada{
+    background-color:#efefef;
+
+}
+
+ .portada div article img{
+    width: 100%;
+    display: block; /* a todas las imagenes siempre poner el block */
+ }
+.portada div form{ /* el buscar... */
+    text-align: right;
+    padding: 5px 0;
+
+}
+.portada div form button{ /* lupa */
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+
+}
+
+.portadaBox {
+    position: relative;
+}
+.portadaData {
+    position: absolute;
+    /* top, bottom, left, right */
+    /* top: 0 */
+    background-color: rgba(255, 255, 255,.8);  /* .8 transparencia*/
+    bottom: 20px;
+    left: 20px;
+    padding: 20px 30px;
+    width: 50%;
+}
+.portadaData h1{
+    margin: 0;
+}
+
+.portadaData div{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ⚡⚡ BLOG CAJA ⚡⚡ */
+
+.blogCaja{
+    padding: 25px 0;  /* separación entre imagenes grande y de abajo */
+}
+
+.blogCaja-contenedor{  /* al contenedor se le agrega estilos aumentando de nombre */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.blogItem{
+    width: calc(100% / 3 - 20px); /* ojo tiene q haber espacio */
+}
+
+.blogItem img{
+    width: 100%; /* imagen el 100% de su contenedor */
+    display: block; /* se pasa a block "siempre" por se img modelo inline */
+}
+.blogItem div h2{ 
+    font-size: 18px;  /* cambio tamaño de letra */
+}
+.blogItem div div{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ⚡⚡ FOOTER ⚡⚡ */
+
+footer {
+    text-align: center;
+    padding: 20px 0 70px 0;
+    font-size: 20px;
+}
+
+footer span{
+    color: rgba(0,0,0,.4);
+    margin-right: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgba(0,0,0,.6);
+    border: 1px solid  rgba(0,0,0,.4);
+    padding: 3px 7px;
+    background-color: rgba(0,0,0,.05);
+    margin-right: 20px;
+    display: block;
+    margin-bottom: 20PX;
+}
+
+ footer a:not(:last-child){ /* Pie de página a: no (: última hija) */
+    margin-right: 20px; /* el ultimo no tiene las propiedades de los demas */
+}
+/*********************************** */
+
+/* ⚡⚡ RESPONSIVE DESIGN ⚡⚡ */
+
+@media only screen and (max-width: 920px){
+    
+    /* NAV */
+    nav div {
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
+
+    /* PORTADA */
+    .portadaData{
+        bottom: 0;
+        left: 0;
+        width: calc(100% - 60px);
+    }
+
+    /* BLOGCAJA */
+    .blogItem{
+        width: calc(50% - 15px);
+    }
+}
+@media only screen and (max-width: 620px){
+    /* PORTADA */
+    .portadaData{
+        position: unset;   /* posición: desarmado; */
+        background-color: white;
+    }
+}
+@media only screen and (max-width: 570px){
+    .blogItem{
+        width: 100px;
+    }
+}
+@media only screen and (max-width: 380px){
+    footer{
+        font-size: 12px;
+    }
+    footer a{
+        margin-right: 5px;
+    }
+}

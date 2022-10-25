@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Tamaño por defecto de la fuente*/
+ /*
+   16PX = 1REM
+ */
+
+ html{
+    font-size: 62.5%; // -> 10PX como tamaño de fuente base -> 1rem
+ }
+ul{
+    list-style: none;
+}
+a,
+a:link,
+a:visited{
+    text-decoration: none;
+    display: inline-block;
+}
+img{
+    display: block;
+}

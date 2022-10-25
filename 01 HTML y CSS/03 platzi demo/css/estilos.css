@@ -60,9 +60,9 @@ nav div {
     padding: 3px 10px;
     border-radius: 5px;
     cursor: pointer;
-    display: none;
+    display: none; /* para q desaparezca icono y se vea solo en celular */
 }
-nav div:hover{
+nav div:hover{ /* cuando el mouse pase por ahi haz algo */
     background-color: white;
     color: black;
 }
@@ -145,7 +145,7 @@ nav div:hover{
 footer {
     text-align: center;
     padding: 20px 0 70px 0;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 footer span{
@@ -160,11 +160,11 @@ footer a{
     padding: 3px 7px;
     background-color: rgba(0,0,0,.05);
     margin-right: 20px;
-    display: block;
+    display: inline-block;
     margin-bottom: 20PX;
 }
 
- footer a:not(:last-child){ /* Pie de página a: no (: última hija) */
+ footer a:not(:last-child){ /* Pie de página a: no (: última hijo) se le llama seudo-clases */
     margin-right: 20px; /* el ultimo no tiene las propiedades de los demas */
 }
 /*********************************** */
@@ -172,13 +172,14 @@ footer a{
 /* ⚡⚡ RESPONSIVE DESIGN ⚡⚡ */
 
 @media only screen and (max-width: 920px){
-    
+/* pantalla solo multimedia y (ancho máximo: 920 px */ 
+   
     /* NAV */
     nav div {
-        display: block;
+        display: block;  /* para q aparezca el icono */
     }
     nav ul{
-        display: none;
+        display: none;  /* para q se oculte los menus */
     }
 
     /* PORTADA */
@@ -196,7 +197,7 @@ footer a{
 @media only screen and (max-width: 620px){
     /* PORTADA */
     .portadaData{
-        position: unset;   /* posición: desarmado; */
+        position: unset;   /* posición: desarmado; q regrese a su posicion */
         background-color: white;
     }
 }
@@ -207,9 +208,9 @@ footer a{
 }
 @media only screen and (max-width: 380px){
     footer{
-        font-size: 12px;
+        font-size: 12px; /* tamaño de fuente */
     }
-    footer a{
+    footer a:not(:last-child) {  /* has cambios a todos menos al ultimo */
         margin-right: 5px;
     }
 }

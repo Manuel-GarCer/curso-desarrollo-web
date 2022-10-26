@@ -1,7 +1,7 @@
 .nav{
     background-color: #34495e;
     padding: 2.5rem 0;
-    &__contenedor{
+    &__contenedor{  //el & remplaza a etiqueta superior (su inicio)
         width: 80%;
         margin-left: auto;
         margin-right: auto;

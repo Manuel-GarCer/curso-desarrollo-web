@@ -1,23 +1,33 @@
-*{
+*{ /* el simbolo asterisco es q se de en todas las etiquetas */
     margin: 0;
     padding: 0;
 }
 
-/* Tamaño por defecto de la fuente*/
- /*
-   16PX = 1REM
- */
+/* ⚡⚡ TAMAÑO POR DEFECTO DE LA FUENTE ⚡⚡  */
+/*
+    16PX = 1REM = al tamaño de la fuente base
+    rem = 30px *******************
+    10px = 1rem   
+    30px = 3rem
+    25.5px = 2.55rem
+*/
+
+/*
+lo cambiamos como q 10px sea fuente basa ya no 16px asi:
+    16px -> 100%
+    10px -> 62.5%
+*/
 
  html{
     font-size: 62.5%; // -> 10PX como tamaño de fuente base -> 1rem
  }
 ul{
-    list-style: none;
+    list-style: none; //quitando viñetas
 }
 a,
 a:link,
-a:visited{
-    text-decoration: none;
+a:visited{  
+    text-decoration: none; //para q el texto no cambie de color cuando sea visitada
     display: inline-block;
 }
 img{

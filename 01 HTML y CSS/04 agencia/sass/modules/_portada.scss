@@ -1,4 +1,27 @@
 .portada{
     background-image: url(../img/header-bg.jpg); //para salir de carpeta de css ..
-    height: 100vh; //100 viupor de alto
+    height: 100vh; //100% viewpor de alto.
+    background-position: center;
+    background-size: cover; //q se acomode la img en largo y ancho
+    &__contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+        &--subtitulo{
+            font-family: $font-merri;
+            font-size: 3.5rem;
+            font-style: italic;
+            color: white;
+        }
+        &--titulo{
+            color:white;
+            font-family: $font-mont;
+            font-size: 7.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+
+        }
+    }
 }

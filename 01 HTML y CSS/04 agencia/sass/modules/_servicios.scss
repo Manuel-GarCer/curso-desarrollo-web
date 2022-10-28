@@ -2,11 +2,11 @@
     &__contenedor{
         &__box{
             &__item{
-                &--logo{
-                    width: 12.8rem;
+                &--logo{ //se crea un cuadrado para el logo
+                    width: 12.8rem; 
                     height: 12.8rem;
                     background-color: #fed136;
-                    border-radius: 50%;
+                    border-radius: 50%; //circulo perfectp
                     display: flex;
                     justify-content: center;
                     align-items: center;

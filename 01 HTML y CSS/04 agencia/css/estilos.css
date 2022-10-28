@@ -65,12 +65,17 @@ font-family: 'Roboto Slab', serif;
 
 .btn-amarillo {
   color: white;
-  background-color: #fec503;
+  background-color: #fed136;
   transition: all 0.3s;
 }
 .btn-amarillo:hover {
   background-color: #fdc302;
   transition: all 0.3s;
+}
+
+.btn-verde {
+  color: black;
+  background-color: green;
 }
 
 .text-center {

@@ -1,26 +1,29 @@
 .portada{
     background-image: url(../img/header-bg.jpg); //para salir de carpeta de css ..
     height: 100vh; //100% viewpor de alto.
-    background-position: center;
+    background-position: center; //q la img inicie al centro
     background-size: cover; //q se acomode la img en largo y ancho
     &__contenedor{
+        // width: 80%;
+        // margin-left: auto;
+        // margin-right: auto;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
+        justify-content: center; //centrado letras de deracha izquierda
+        align-items: center; //centrado letras de arriba abajo
+        height: 100%; //alto 100%
         flex-direction: column;
         &--subtitulo{
             font-family: $font-merri;
             font-size: 3.5rem;
-            font-style: italic;
+            font-style: italic; //estilo de fuente: cursiva;
             color: white;
         }
         &--titulo{
             color:white;
             font-family: $font-mont;
             font-size: 7.5rem;
-            text-transform: uppercase;
-            font-weight: 700;
+            text-transform: uppercase; //transformación de texto: mayúsculas
+            font-weight: 700; //peso de fuente: 700 (q se elijo previamente)
 
         }
     }

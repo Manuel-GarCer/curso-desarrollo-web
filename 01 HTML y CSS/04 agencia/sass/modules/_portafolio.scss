@@ -4,18 +4,19 @@
         &__box{
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            // justify-content: space-between;
+            gap: 20px; //brecha a los lados
             &__item{
                 width: calc(100% / 3 - 40px / 3);
                 &__imgBox{
                     position: relative;
-                    img{
+                    img{ //imagen de atras
                         width: 100%;
                     }
-                    // img:hover + div{
+                    // img:hover + div{  q el hover se ejecute en div
                     //     display: flex;
                     // }
-                    div{
+                    div{  //de la cruz o signo de mas + y color amarillo
                         position: absolute;
                         top: 0;
                         left: 0;
@@ -28,8 +29,8 @@
                         align-items: center;
                         transition: all .5s;
 
-                        opacity: 0;
-                        visibility: hidden;
+                        opacity: 0;  //opaco
+                        visibility: hidden; //Visibilidad: oculta;
 
                         i{
                             color: white;
@@ -37,10 +38,10 @@
                         }
                     }
                 }
-                &__imgBox:hover{
+                &__imgBox:hover{ //hover:flotar cuando el mouse pase por ahí ejecuta algo
                     div{
-                        opacity: 1;
-                        visibility: visible;
+                        opacity: 1; //opaco
+                        visibility: visible; //Visibilidad: visible
                         transition: all .5s;
                     }
                 }

@@ -8,8 +8,9 @@
                     width: 22.5rem;
                     height: 22.5rem;
                     border: 6px solid #dbdddf;
-                    border-radius: 50%;
+                    border-radius:50%;
                     overflow: hidden;
+
                     img{
                         width: 100%;
                     }
@@ -17,8 +18,8 @@
                 &__redes{
                     text-align: center;
                     a{
-                        &:not(:last-child){
-                            margin-right: 2rem;
+                        &:not(:last-child){ //: no (: última hija) 
+                            margin-right: 2rem; //Margen derecha
                         }
                         i{
                             font-size: 1.5rem;
@@ -30,6 +31,7 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
+
                         }
                     }
                 }
@@ -40,7 +42,9 @@
             font-family: $font-merri;
             color: #6c757d;
             padding: 0 15%;
-            line-height: 2.8rem;
+            line-height: 2.8rem;  //altura de la línea
+            //se le esta sumando 13px 
+
         }
     }
 }

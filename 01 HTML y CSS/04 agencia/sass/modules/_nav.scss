@@ -17,6 +17,10 @@
         }
         &__menu{
             display: flex; //item uno al lado del otro
+            @media only screen and (max-width: $bp-large){
+                display: none;  
+            }
+
             &__item{
                 &--link{
                     color: white;
@@ -31,6 +35,25 @@
                     }
                 } 
             }
+        }
+        &--btn{
+            font-family: $font-mont;
+            font-size: 1.4rem;
+            color: rgba(white, .6);
+            text-transform: uppercase;
+            border: 1px solid rgba(white, .6);
+            padding: 1rem;
+            border-radius: .5rem;
+            font-weight: 700;
+            display: none;
+            @media only screen and (max-width: $bp-large){
+                display: block;  
+            }
+            i{
+                margin-left: 1rem;
+            }
+
+
         }
     }
 }

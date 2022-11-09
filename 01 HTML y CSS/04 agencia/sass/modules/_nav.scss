@@ -45,9 +45,9 @@
             padding: 1rem;
             border-radius: .5rem;
             font-weight: 700;
-            display: none;
+            display: none; //para q no aparezca al principio el boton
             @media only screen and (max-width: $bp-large){
-                display: block;  
+                display: block; //para q aparezca a los 992px
             }
             i{
                 margin-left: 1rem;

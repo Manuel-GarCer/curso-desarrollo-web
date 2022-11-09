@@ -48,6 +48,9 @@
                 &__panel{
                     width: 33%; //altura de paneles
                     padding-bottom: 8rem;
+                    @media only screen and (max-width: $bp-medium){
+                        width: auto;
+                    }
                 
                     h3{
                         margin-bottom: 1rem;
@@ -59,7 +62,11 @@
                 &:nth-child(odd){  //elementos impares
                     .about__contenedor__timeline__item__panel{
                         text-align: right; //alineación de texto: derecha
-                        margin-left: 6%; //Margen izquierda: 6%;
+                        margin-left: 6%; //Margen izquierda: 6%
+                        @media only screen and (max-width: $bp-medium){
+                            text-align: left;
+                            margin-left: 11rem;
+                        }
                     }
                 }
                 &:nth-child(even){  //elementos pares
@@ -68,6 +75,10 @@
                     .about__contenedor__timeline__item__panel{
                         // margin-left: auto; //margen a la izquierda
                         margin-right: 6%;
+                        @media only screen and (max-width: $bp-medium){
+                            margin-left: 11rem;
+                            margin-right: 0;
+                        }
                      }
                 }
             }

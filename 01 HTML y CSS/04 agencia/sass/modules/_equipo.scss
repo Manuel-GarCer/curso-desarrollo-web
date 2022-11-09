@@ -8,7 +8,7 @@
             }
             &__item{
                 @media only screen and (max-width: $bp-large){
-                    &:not(:last-of-type){
+                    &:not(:last-of-type){ //&:no(:último-de-tipo)
                         margin-bottom: 6rem;
                     }  
                 }
@@ -19,8 +19,8 @@
                     border-radius:50%;
                     overflow: hidden;
                     @media only screen and (max-width: $bp-large){
-                          margin-left: auto;
-                          margin-right: auto;
+                          margin-left: auto; //margen izq
+                          margin-right: auto; //margen der
                     }
 
                     img{

@@ -1,3 +1,21 @@
+/*
+    ⚡⚡ BREAKPOINTS ⚡⚡ (Puntos de Ruptura)
+    em son referencia al tamaño de fuente base = 16px = 1em
+    
+    estos 2 ya no tanto por ser muy grandes
+    1400PX / 16 -> 87.5em  
+    1200PX / 16->  75em
+    
+    Los 3 de abajo son los que mas se usan
+    992PX / 16-> 62em
+    768PX / 16-> 48em
+    576PX / 16-> 36em
+    
+    estos 2 ya no tanto por ser muy pequeños
+    480PX / 16-> 30em
+    320PX / 16-> 20em
+*/
+
 $bp-big: 87.5em;
 $bp-extraLarge: 75em;
 $bp-large: 62em;

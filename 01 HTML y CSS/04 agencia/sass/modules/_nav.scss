@@ -3,6 +3,8 @@
     padding: 2.5rem 0;
     position: fixed; //fijo para q no aparezca scroll
     width: 100%;
+    transition: all .3s;
+    z-index: 1;
     &__contenedor{  //el & remplaza a etiqueta superior (su inicio)
         // width: 80%;
         // margin-left: auto;
@@ -14,6 +16,7 @@
             color: #fec503;
             font-size: 2.8rem;
             font-family: $font-kaushan;
+            transition: all .3s;
         }
         &__menu{
             display: flex; //item uno al lado del otro
@@ -54,6 +57,15 @@
             }
 
 
+        }
+    }
+    &.cambioDeNav{
+        background-color: #212529;
+        padding: 1rem 0;
+        transition: all .3s;
+        & .nav__contenedor--logo{
+            font-size: 2rem;
+            transition: all .3s;
         }
     }
 }

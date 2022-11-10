@@ -39,6 +39,9 @@ $font-roboto: 'Roboto Slab', serif;
     @media only screen and (max-width: $bp-medium){
         max-width: 54rem;  
     }
+    @media only screen and (max-width: $bp-small){
+        max-width: 0 2rem;
+    }
 }
 .btn{ //para crear botones en html solo
     font-size: 1.8rem;

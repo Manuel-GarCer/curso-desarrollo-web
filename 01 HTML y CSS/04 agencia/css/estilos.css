@@ -37,6 +37,11 @@ lo cambiamos como q 10px sea fuente basa ya no 16px asi:
 html {
   font-size: 62.5%;
 }
+@media only screen and (max-width: 30em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 ul {
   list-style: none;
@@ -92,6 +97,11 @@ font-family: 'Roboto Slab', serif;
 @media only screen and (max-width: 48em) {
   .contenedor {
     max-width: 54rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .contenedor {
+    max-width: 0 2rem;
   }
 }
 
@@ -330,6 +340,8 @@ font-family: 'Roboto Slab', serif;
   padding: 2.5rem 0;
   position: fixed;
   width: 100%;
+  transition: all 0.3s;
+  z-index: 1;
 }
 .nav__contenedor {
   display: flex;
@@ -340,6 +352,7 @@ font-family: 'Roboto Slab', serif;
   color: #fec503;
   font-size: 2.8rem;
   font-family: "Kaushan Script", cursive;
+  transition: all 0.3s;
 }
 .nav__contenedor__menu {
   display: flex;
@@ -380,6 +393,15 @@ font-family: 'Roboto Slab', serif;
 .nav__contenedor--btn i {
   margin-left: 1rem;
 }
+.nav.cambioDeNav {
+  background-color: #212529;
+  padding: 1rem 0;
+  transition: all 0.3s;
+}
+.nav.cambioDeNav .nav__contenedor--logo {
+  font-size: 2rem;
+  transition: all 0.3s;
+}
 
 .portada {
   background-image: url(../img/header-bg.jpg);
@@ -400,12 +422,22 @@ font-family: 'Roboto Slab', serif;
   font-style: italic;
   color: white;
 }
+@media only screen and (max-width: 48em) {
+  .portada__contenedor--subtitulo {
+    font-size: 2.4rem;
+  }
+}
 .portada__contenedor--titulo {
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 7.5rem;
   text-transform: uppercase;
   font-weight: 700;
+}
+@media only screen and (max-width: 48em) {
+  .portada__contenedor--titulo {
+    font-size: 5.2rem;
+  }
 }
 
 .servicios__contenedor__box {
@@ -450,6 +482,11 @@ font-family: 'Roboto Slab', serif;
 @media only screen and (max-width: 62em) {
   .portafolio__contenedor__box__item {
     width: calc(50% - 10px);
+  }
+}
+@media only screen and (max-width: 36em) {
+  .portafolio__contenedor__box__item {
+    width: 100%;
   }
 }
 .portafolio__contenedor__box__item__imgBox {
@@ -667,14 +704,32 @@ font-family: 'Roboto Slab', serif;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 .publicidad__contenedor a {
   padding: 0 2rem;
   box-sizing: border-box;
   width: 25%;
 }
+@media only screen and (max-width: 48em) {
+  .publicidad__contenedor a {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .publicidad__contenedor a {
+    width: 100%;
+  }
+}
 .publicidad__contenedor a img {
   width: 100%;
+}
+@media only screen and (max-width: 36em) {
+  .publicidad__contenedor a img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .contacto {
@@ -691,6 +746,14 @@ font-family: 'Roboto Slab', serif;
 .contacto__contenedor__form__col {
   width: calc(50% - 1.5rem);
 }
+@media only screen and (max-width: 48em) {
+  .contacto__contenedor__form__col {
+    width: 100%;
+  }
+  .contacto__contenedor__form__col:first-child {
+    margin-bottom: 2rem;
+  }
+}
 .contacto__contenedor__form__col--formGroup:not(:last-child) {
   margin-bottom: 2rem;
 }
@@ -705,6 +768,40 @@ font-family: 'Roboto Slab', serif;
 }
 .contacto__contenedor__form--btnBox {
   width: 100%;
+}
+
+.footer__contenedor__caja {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__contenedor__caja--descri1 {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: #6c757d;
+}
+.footer__contenedor__caja--redes {
+  text-align: center;
+}
+.footer__contenedor__caja--redes a:not(:last-child) {
+  margin-right: 2rem;
+}
+.footer__contenedor__caja--redes a i {
+  font-size: 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__contenedor__caja--descri2 {
+  display: flex;
+  gap: 20px;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: #6c757d;
 }
 
 /*# sourceMappingURL=estilos.css.map */

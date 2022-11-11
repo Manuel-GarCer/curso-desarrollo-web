@@ -1,0 +1,28 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+li, ul{
+    list-style: none;
+    color: black; 
+}
+
+a,
+a:link,
+a:visited{  
+    text-decoration: none; 
+    display: inline-block;
+    color: black; 
+}
+
+img{
+    display: block; 
+}
+

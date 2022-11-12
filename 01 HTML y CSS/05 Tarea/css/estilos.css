@@ -17,7 +17,6 @@ a:link,
 a:visited {
   text-decoration: none;
   display: inline-block;
-  color: black;
 }
 
 img {
@@ -43,9 +42,13 @@ img {
   font-size: 1.6rem;
 }
 
+.amplitud {
+  width: 100%;
+}
+
 .btn1 {
   color: white;
-  background-color: red;
+  background-color: black;
   font-size: 1.2rem;
   padding: 1rem 2rem;
   border-radius: 0.3rem;
@@ -226,6 +229,7 @@ img {
   padding: 2.5rem 0;
   position: fixed;
   width: 100%;
+  top: 0;
 }
 .nav__contenedor {
   justify-content: center;
@@ -236,7 +240,7 @@ img {
   justify-content: space-between;
 }
 .nav__contenedor__caja__menu1 {
-  padding: 0 0 0 45rem;
+  padding: 0 0 0 20%;
   text-transform: lowercase;
 }
 .nav__contenedor__caja__menu2 {
@@ -248,7 +252,7 @@ img {
   padding: 0 5rem;
 }
 .nav__contenedor__caja__menu3 {
-  padding: 0 45rem 0 0;
+  padding: 0 20% 0 0;
   display: flex;
   gap: 0 30px;
   text-transform: lowercase;

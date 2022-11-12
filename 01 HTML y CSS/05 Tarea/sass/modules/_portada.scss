@@ -1,3 +1,16 @@
 .portada{
-    background-image: url(../img/portada.png);
+   &__contenedor{
+        display: block;
+        margin-left: auto; 
+        margin-right: auto;
+        margin: 15rem 0;
+        &__caja1{
+            margin-left: 183rem;
+            display: flex;
+            flex-direction: column;
+        }
+        &__caja2{
+            margin-left: 175rem;
+        }
+   }
 }

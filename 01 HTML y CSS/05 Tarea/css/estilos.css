@@ -25,7 +25,7 @@ img {
 }
 
 .contenedor {
-  max-width: 90rem;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   font-family: "Roboto", sans-serif;
@@ -35,8 +35,27 @@ img {
   text-align: center;
 }
 
-.font-size-larg {
+.font-size-l {
   font-size: 3rem;
+}
+
+.font-size-m {
+  font-size: 1.6rem;
+}
+
+.btn1 {
+  color: white;
+  background-color: red;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+}
+
+.btn2 {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem black;
+  border-color: black;
 }
 
 .mt-1 {
@@ -217,7 +236,7 @@ img {
   justify-content: space-between;
 }
 .nav__contenedor__caja__menu1 {
-  padding: 0 5rem;
+  padding: 0 0 0 45rem;
   text-transform: lowercase;
 }
 .nav__contenedor__caja__menu2 {
@@ -229,13 +248,25 @@ img {
   padding: 0 5rem;
 }
 .nav__contenedor__caja__menu3 {
+  padding: 0 45rem 0 0;
   display: flex;
   gap: 0 30px;
   text-transform: lowercase;
 }
 
-.portada {
-  background-image: url(../img/portada.png);
+.portada__contenedor {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 15rem 0;
+}
+.portada__contenedor__caja1 {
+  margin-left: 183rem;
+  display: flex;
+  flex-direction: column;
+}
+.portada__contenedor__caja2 {
+  margin-left: 175rem;
 }
 
 /*# sourceMappingURL=estilos.css.map */

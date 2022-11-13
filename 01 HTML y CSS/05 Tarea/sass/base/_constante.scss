@@ -20,9 +20,20 @@ $font-roboto:'Roboto', sans-serif;
 .font-size-l{
     font-size: 3.5rem;
 }
+
+.font-size-lm{
+    font-size: 2.5rem;
+}
+
 .font-size-m{
     font-size: 1.6rem;
 }
+
+.font-size-s{
+    font-size: 1.3rem;
+}
+
+
 
 .amplitud{
     width: 100%; 
@@ -34,14 +45,9 @@ $font-roboto:'Roboto', sans-serif;
     font-size: 1.2rem;
     padding: 1rem 3rem;
     border-radius: .3rem;
+    margin-top: 20px;
 }
 
-.btn2{
-    font-size: 1.2rem;
-    padding: .3rem 8rem;
-    border-radius: 1.3rem black;
-    border-color: black;
-}
 
 .menu{
     margin-bottom: 1rem;
@@ -172,3 +178,85 @@ $font-roboto:'Roboto', sans-serif;
 .pb-10{
     padding-bottom: 10rem;
 }
+
+
+
+.pr-1{
+    padding-right: 1rem;
+}
+
+.pr-2{
+    padding-right: 2rem;
+}
+
+.pr-3{
+    padding-right: 3rem;
+}
+.pr-4{
+    padding-right: 4rem;
+}
+
+.pr-5{
+    padding-right: 5rem;
+}
+
+.pr-6{
+    padding-right: 6rem;
+}
+
+.pr-7{
+    padding-right: 7rem;
+}
+
+.pr-8{
+    padding-right: 8rem;
+}
+
+.pr-9{
+    padding-right: 9rem;
+}
+
+.pr-10{
+    padding-right: 10rem;
+}
+
+.pl-1{
+    padding-left: 1rem;
+}
+
+.pl-2{
+    padding-left: 2rem;
+}
+
+.pl-3{
+    padding-left: 3rem;
+}
+.pl-4{
+    padding-left: 4rem;
+}
+
+.pl-5{
+    padding-left: 5rem;
+}
+
+.pl-6{
+    padding-left: 6rem;
+}
+
+.pl-7{
+    padding-left: 7rem;
+}
+
+.pl-8{
+    padding-left: 8rem;
+}
+
+.pl-9{
+    padding-left: 9rem;
+}
+
+.pl-10{
+    padding-left: 10rem;
+}
+
+

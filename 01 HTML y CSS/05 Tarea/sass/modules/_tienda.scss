@@ -1,0 +1,12 @@
+.tienda{
+    &__contenedor{
+        &__cajaMayor{
+            display: flex;
+            justify-content: space-evenly;
+            &__item{
+                    display: flex;
+                    flex-direction: column row-reverse;
+            }
+        }
+    }
+}

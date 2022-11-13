@@ -1,5 +1,5 @@
 .nav{
-    padding: 2.5rem 0;
+    margin: 2.5rem 0;
     position: fixed; 
     width: 100%;
     top: 0;
@@ -9,20 +9,20 @@
         &__caja{
             display: flex;
             justify-content: space-between;
+            padding: 0 0;
             &__menu1{
-                padding: 0 0 0 20%;
+                padding: 0 0 0 10%;
                 text-transform: lowercase;
             }
             &__menu2{
                 display: flex;
                 justify-content: space-between;
                 &__item{
-                    font-size: 1rem;
                     padding: 0 5rem;
                 }      
             }
             &__menu3{
-                padding: 0 20% 0 0;
+                padding: 0 10% 0 0;
                 display: flex;
                 gap: 0 30px;
                 text-transform: lowercase;

@@ -3,6 +3,14 @@
         &__caja{
             display: flex;
             justify-content: space-around;
+            &__item{
+                &__imgBox{
+                    // width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

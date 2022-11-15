@@ -1,31 +1,39 @@
 .nav{
-    margin: 2.5rem 0;
+    // margin: 2.5rem 0;
     position: fixed; 
     width: 100%;
     top: 0;
-    &__contenedor{ 
-        justify-content: center;
-        align-items: center;
+    z-index: 1;
+    padding: 2.5rem 0;
+    background-color: white;
+    &__contenedor{
+        padding: 0 2rem;
         &__caja{
             display: flex;
             justify-content: space-between;
-            padding: 0 0;
+            // padding: 0 0;
             &__menu1{
-                padding: 0 0 0 10%;
+                // padding: 0 0 0 10%;
                 text-transform: lowercase;
+                color: black;
             }
             &__menu2{
                 display: flex;
                 justify-content: space-between;
                 &__item{
-                    padding: 0 5rem;
+                    // padding: 0 5rem;
+                    &--link{
+                        padding: 0 2rem;
+                        color: black;
+                        // color: black;
+                    }
                 }      
             }
             &__menu3{
-                padding: 0 10% 0 0;
+                // padding: 0 10% 0 0;
                 display: flex;
-                gap: 0 30px;
-                text-transform: lowercase;
+                // gap: 0 30px;
+                color: black;
             }
         }
     }

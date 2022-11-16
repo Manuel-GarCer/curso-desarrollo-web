@@ -1,5 +1,4 @@
 .nav{
-    // margin: 2.5rem 0;
     position: fixed; 
     width: 100%;
     top: 0;
@@ -11,9 +10,10 @@
         &__caja{
             display: flex;
             justify-content: space-between;
-            // padding: 0 0;
+            @media only screen and (max-width: 920px){
+                display: none;
+               }
             &__menu1{
-                // padding: 0 0 0 10%;
                 text-transform: lowercase;
                 color: black;
             }
@@ -21,18 +21,14 @@
                 display: flex;
                 justify-content: space-between;
                 &__item{
-                    // padding: 0 5rem;
                     &--link{
                         padding: 0 2rem;
                         color: black;
-                        // color: black;
                     }
                 }      
             }
             &__menu3{
-                // padding: 0 10% 0 0;
                 display: flex;
-                // gap: 0 30px;
                 color: black;
             }
         }

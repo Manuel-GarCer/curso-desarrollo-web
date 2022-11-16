@@ -3,6 +3,10 @@
         &__cajaMayor{
             display: flex;
             justify-content: space-evenly;
+            @media only screen and (max-width: 675px){
+              flex-direction: column; 
+              text-align: center; 
+            }          
             &__item{
                     display: flex;
                     flex-direction: column row-reverse;

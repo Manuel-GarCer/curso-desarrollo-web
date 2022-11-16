@@ -46,7 +46,24 @@ $font-roboto:'Roboto', sans-serif;
     margin-top: 20px;
 }
 
+.menuP{
+   background-color: black;
+   color: white;
+   padding: 8px 8px;
+   border-radius: 5px;
+   margin-left: 95%; 
+   cursor: pointer;
+   display: none;
+   @media only screen and (max-width: 920px){
+    display: block;
+   }
 
+}
+
+.menuP:hover{
+    background: peru;
+    color: black;
+}
 .menu{
     margin-bottom: 1rem;
 }

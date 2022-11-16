@@ -3,9 +3,13 @@
         &__caja{
             display: flex;
             justify-content: space-around;
+            margin: none;
+            @media only screen and (max-width: 920px){
+                width: calc(75% - 25px);
+                flex-wrap: wrap;           
+               }
             &__item{
                 &__imgBox{
-                    // width: 100%;
                     img{
                         width: 100%;
                     }

@@ -51,5 +51,5 @@ let correo = nombre[0] + apellido + '@continental.edu.pe';
 console.log(correo);
 
 // ⚡⚡ METODOS
-console.log(correo.toUpperCase());
-console.log(correo.toLowerCase());
+console.log(correo.toUpperCase()); // todo a mayusculas
+console.log(correo.toLowerCase()); // todo a minusculas

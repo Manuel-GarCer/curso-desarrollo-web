@@ -13,28 +13,27 @@
 */
 let num = 23;
 
-if(num === '23'){
+if(num === "23"){
     console.log('si son iguales');
 } else {
     console.log('no, son diferentes');
 }
 
 if(num > 40){
-    console.log(`el numero ${num} es mayor que 40`);
-} 
-else {
-    console.log(`el numero ${num}, no es mayor que 40`);
+    console.log(`el numero ${num} es mayor que 40`)
+}else{
+    console.log(`el numero ${num} no es mayor que 40`)
 }
 
-console.log(typeof(num));
+console.log(typeof(num)); //tipo de
 console.log(typeof(true));
 
-if(typeof(num) === 'number'){
-    console.log('si es un numero');
+if(typeof(num) === "number"){
+    console.log("si es un numero")
 }
 
-if(num !== '23'){
-    console.log('son diferentes');
-} else {
-    console.log('son iguales');
+if(num != "23"){
+    console.log("son diferetes");
+} else{
+    console.log("son iguales")
 }

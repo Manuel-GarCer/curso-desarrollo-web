@@ -15,22 +15,29 @@ console.log("*********************************************");
 const fechaNacimiento = 1756;
 const nombre = "Juan"
 
-function obtenerEdad(fechaNac, nom){
+
+
+function obtenerEdad(fechaNac, nom){  // 💡💡 PARAMETROS "VARIABLES O INPUTS QUE MANEJAN LAS FUNCIONES"
     let edad = 2022 - fechaNac;
     console.log(`Hola, soy ${nom} y tengo ${edad} años de edad`);
 }
 
-obtenerEdad(fechaNacimiento, nombre);
 
-let apellido = "Arroyo"
+obtenerEdad(fechaNacimiento, nombre);  // 💡💡 AL MOMENTO DE EJECUTAR LA FUNCION PASAMOS ARGUMENTOS.
+//argumentos son valores q reemplaza a parametros
+
+
+let apellido = "Arroyo" //variable global
 console.log(apellido);
 
 function saludar2(){
-    apellido ="Marquez";
+    // SCOPE - AMBITO - CONTEXTO DE LA FUNCION
+    let apellido ="García";   //variable local
     console.log(`hola, mi apellido es ${apellido}`);
+    // SCOPE
 }
 saludar2();
-console.log(apellido);
+// console.log(apellido);
 
 function saludar3(ape){
     console.log(`hola soy ${ape}`)
@@ -38,7 +45,7 @@ function saludar3(ape){
 saludar3(apellido)
 console.log("*********************************************");
 
-const arrayNums = [123,84,345,864,34578];
+const arrayNums = [123,84,345,864,34578,["hola", "manolo"]];
 
 function printArray(array){
     for(let i = 0; i < array.length; i++){
@@ -56,4 +63,5 @@ function sumar(num1, num2){
 }
 
 let respuesta = sumar(5, 3);
-console.log(sumar(2,10));
+console.log(respuesta) // 8
+console.log(sumar(2,10)); // 12

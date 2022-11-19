@@ -33,10 +33,11 @@ let html = '';
 //     // console.log(personajes2[contador]);
 //     // html = html + personajes2[contador];
 //     // html = html + `<a href="#">${personajes2[contador]}</a>`;
-//     html += `<a href="#">${personajes2[contador]}</a>`;
+    // html += `<a href="#">${personajes2[contador]}</a>`;
 // }
-// console.log(html);
+console.log(html);
 const bloque = document.querySelector('.bloque');
+
 
 for(let i = 0; i < personajes2.length; i++){
     html += `<a href="#">${personajes2[i]}</a>`;

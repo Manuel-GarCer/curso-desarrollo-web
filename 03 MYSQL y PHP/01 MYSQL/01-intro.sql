@@ -143,3 +143,17 @@ SELECT
     CONCAT(act_apellidos, ' ', act_nombres) AS actor,
     CONCAT(SUBSTRING(act_nombres, 1, 1), act_apellidos, '@dominio.com') AS correo
     FROM actores;
+
+SELECT COUNT (peli_genero) AS cantidad, peli_genero FROM PELICULAS GROUP BY peli_genero;
+
+SELECT COUNT (peli_genero) AS cantidad, 
+    peli_genero
+FROM peliculas
+    WHERE peli_genero = "ciencia ficcion"
+    GROUP BY peli_genero;
+
+SELECT * FROM peliculas WHERE peli_nombre LIKE "e%";
+
+SELECT * FROM peliculas WHERE peli_nombre LIKE "%e";
+
+SELECT * FROM peliculas WHERE peli_nombre LIKE "%e%";

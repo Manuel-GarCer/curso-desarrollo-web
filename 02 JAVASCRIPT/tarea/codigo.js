@@ -39,83 +39,67 @@ console.log("***************************************");
 
 //RESPUESTA N° 3
 
-const bloque3 = document.querySelector(".rpt3");
+let bloque3 = document.querySelector(".rpt3");
 
-const arrayNomb = ["Manuel", "Christian", "Carlos", "María", "Juan", "Erika", "David", "Luis", "Jenyfer", "Alex"];
+const nomb = {
 
-function printArray(array){
-    for(let i = 0; i < array.length; i++){
-        console.log(array[i]);
+    arrayNomb: ["Manuel", "Christian", "Carlos", "María", "Juan", "Erika", "David", "Luis", "Jenyfer", "Alex"],
+
+    printNomb: function(etiqueta3){
+        let plantilla3 = "";
+        for(let i = 0; i < this.arrayNomb.length; i++){
+            //console.log(this.arrayNomb[i]);
+            plantilla3 = plantilla3 + `<h3>${this.arrayNomb[i]}</h3>`
+        }
+        console.log(plantilla3);
+        etiqueta3.innerHTML = plantilla3
     }
 }
-printArray(arrayNomb);
-document.write(arrayNomb) 
 
-bloque3.innerHTML = printArray(arrayNomb);
-
-// document.getElementById("prueba").innerHTML = printArray(arrayNomb);
+nomb.printNomb(bloque3);
 
 console.log("***************************************");
 
 //RESPUESTA N°4
-
-const arrayFilms = {
-    names: ["Star Wars", "El Padrino", "Avengers", "La lista de Schindler", "Forrest Gump", "Terminator", "Titanic", "Toy Story", "Spiderman", "Batman"];
-    imprimirNames: function(etiqueta){
-        let plantilla = "";
-        for(let i = 0; i < this.names.length; i++){
-            //console.log(this.names[i]);
-            plantilla = plantilla + `<h2>${this.names[i]} </h2>`
-        }
-        console.log(plantilla);
-        etiqueta.innerHTML = plantilla;
-    }
-}
-
+let bloque4a = document.querySelector(".rpt4a");
+let bloque4b = document.querySelector(".rpt4b");
 const cine = {
     nombre: "Cineplanet Primavera",
     ciudad: "Lima",
     costoFuncion: 20,
     direccion: "Av. Angamos Este 268",
+    names: ["Star Wars", "El Padrino", "Avengers", "La lista de Schindler", "Forrest Gump", "Terminator", "Titanic", "Toy Story", "Spiderman", "Batman"],
+    imprimirNames: function(etiqueta4){
+        let plantilla4 = "";
+        for(let i = 0; i < this.names.length; i++){
+            //console.log(this.names[i]);
+            plantilla4 = plantilla4 + `<h3>${this.names[i]}</h3>`
+        }
+        console.log(plantilla4);
+        etiqueta4.innerHTML = plantilla4;
+    },
     imprimirThis: function(){
         console.log(this);
     },
+
 }
-cine.imprimirThis();
-let rpt4 = document.querySelector(".rpt4");
-personaje.imprimirThis(rpt4);
+cine.imprimirNames(bloque4b);
+
+cine.imprimirThis(bloque4a)
+
+bloque4a.innerHTML = JSON.stringify(cine)
+
+
 
 
 console.log("***************************************");
 
 //RESPUESTA N°5
+
 let boton = document.getElementById("btn");
 boton.addEventListener("click",() => {
     boton.style.backgroundColor= "red";
 })
-
-// como Programar un boton para que cuando se haga "click" cambie de color de fondo?
-
-%%javascript
-(function() {
-    let boton = document.getElementById("boton");
-    boton.addEventListener("click", myf1);
-    boton.addEventListener("mouseover", function(){boton.textContent="¡Hola!"});
-    boton.addEventListener("mouseout", function(){boton.textContent="No te vayas"});
-
-    let contador = 0;
-
-    function myf1() {
-      if (contador % 2 ==0) {
-          boton.style.backgroundColor= "red";
-      } else {
-          boton.style.backgroundColor = "blue";
-      }
-      contador += 1;
-    }
-})();
-
-// how to Program a button so that when it is "clicked" it changes its background color?
 
 
 

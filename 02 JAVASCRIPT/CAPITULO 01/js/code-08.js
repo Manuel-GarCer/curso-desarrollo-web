@@ -66,7 +66,7 @@ const personaje = {
         console.log(`hola soy ${this.nombre} y estoy saltando`);
     },
     imprimirSkills: function(etiqueta){
-        let plantilla = " ";
+        let plantilla = "";
         for(let i = 0; i < this.skills.length; i++){
             //console.log(this.skills[i]);
             plantilla = plantilla + `<h2>${this.skills[i]} </h2>`

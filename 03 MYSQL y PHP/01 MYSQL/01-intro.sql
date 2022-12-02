@@ -119,7 +119,9 @@ INSERT INTO actores (act_nombres, act_apellidos) VALUES
 
 --HACER UN QUERY DONDE ME DEVUELVA LOS NOMBRES Y APELLIDOS
 
-SELECT act_nombres, act_apellidos FROM actores;
+SELECT act_nombres, act_apellidos FROM actores; 
+
+-- FROM: DE
 
 SELECT CONCAT(act_nombres, " ", act_apellidos) FROM actores;
 
@@ -144,16 +146,47 @@ SELECT
     CONCAT(SUBSTRING(act_nombres, 1, 1), act_apellidos, '@dominio.com') AS correo
     FROM actores;
 
-SELECT COUNT (peli_genero) AS cantidad, peli_genero FROM PELICULAS GROUP BY peli_genero;
+-- ⚡⚡ GROUP BY
 
-SELECT COUNT (peli_genero) AS cantidad, 
+SELECT * FROM peliculas GROUP BY peli_genero;  --agrupar por
+
+
+SELECT COUNT(peli_genero) AS cantidad, peli_genero FROM peliculas GROUP BY peli_genero;
+
+--cantidad: para q se agrupen en esa columna
+
+-- HACER UN QUERY QUE NOS DEVUELVA LA CANTIDAD DE PELICULAS QUE SON CIENCIA FICCION
+-- CANTIDAD | GENERO
+
+SELECT 
+    COUNT(peli_genero) AS cantidad, 
     peli_genero
 FROM peliculas
-    WHERE peli_genero = "ciencia ficcion"
+    WHERE peli_genero = "accion"  
     GROUP BY peli_genero;
 
+-- COUNT: CONTAR
+-- WHERE: DONDE ojo WHERE antes de GROUP BY o ORDER BY siempre
+-----------------------------------------------------------------------------------
+-- HACER UN QUERY QUE NOS DEVUELVA LA CANTIDAD DE PELICULAS QUE SON RESTRICCION PG-13
+-- CANTIDAD | RESTRICCION
+SELECT
+    COUNT(peli_restricciones) AS canti,
+    peli_restricciones
+FROM peliculas
+    WHERE peli_restricciones = 'pg-16'
+    GROUP BY peli_restricciones;
+
+-- ⚡⚡ COMODINES
 SELECT * FROM peliculas WHERE peli_nombre LIKE "e%";
+
+-- devuelveme peliculas que empiezen por "e" seguida de mas
+-- aca comidin es % y * 
 
 SELECT * FROM peliculas WHERE peli_nombre LIKE "%e";
 
+-- devuelveme peliculas que terminen por "e"
+
 SELECT * FROM peliculas WHERE peli_nombre LIKE "%e%";
+
+-- devuelveme peliculas que tengan entre "e"

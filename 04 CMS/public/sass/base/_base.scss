@@ -1,0 +1,65 @@
+/*
+    ⚡⚡ BREAKPOINTS ⚡⚡ (Puntos de Ruptura)
+    em son referencia al tamaño de fuente base = 16px = 1em
+    
+    estos 2 ya no tanto por ser muy grandes
+    1400PX / 16 -> 87.5em  
+    1200PX / 16->  75em
+    
+    Los 3 de abajo son los que mas se usan
+    992PX / 16-> 62em
+    768PX / 16-> 48em
+    576PX / 16-> 36em
+    
+    estos 2 ya no tanto por ser muy pequeños
+    480PX / 16-> 30em
+    320PX / 16-> 20em
+*/
+
+$bp-big: 87.5em;
+$bp-extraLarge: 75em;
+$bp-large: 62em;
+$bp-medium: 48em;
+$bp-small: 36em;
+$bp-extraSmall: 30em;
+
+
+
+*{ /* el simbolo asterisco es q se de en todas las etiquetas */
+    margin: 0;
+    padding: 0;
+}
+
+/* ⚡⚡ TAMAÑO POR DEFECTO DE LA FUENTE ⚡⚡  */
+/*
+    16PX = 1REM = al tamaño de la fuente base
+    rem = 30px *******************
+    10px = 1rem   
+    30px = 3rem
+    25.5px = 2.55rem
+*/
+
+/*
+lo cambiamos como q 10px sea fuente basa ya no 16px asi:
+    16px -> 100%
+    10px -> 62.5%
+*/
+
+ html{
+    font-size: 62.5%; // -> 10px como tamaño de fuente base -> 1rem
+    @media only screen and (max-width: $bp-extraSmall){
+        font-size: 50%; // 1rem = 8px
+    }
+ }
+ul{
+    list-style: none; //quitando viñetas
+}
+a,
+a:link,
+a:visited{  
+    text-decoration: none; //para q el texto no cambie de color cuando sea visitada
+    display: inline-block;
+}
+img{
+    display: block; //siempre a todas las imagenes
+}

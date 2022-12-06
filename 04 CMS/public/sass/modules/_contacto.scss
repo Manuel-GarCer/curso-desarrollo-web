@@ -1,0 +1,42 @@
+.contacto{
+    background-image: url(../img/map-image.png);
+    background-color: #212529;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__contenedor{
+        &__form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &__col{
+                width: calc(50% - 1.5rem);
+                @media only screen and (max-width: $bp-medium){
+                    width: 100%;
+                    &:first-child{
+                        margin-bottom: 2rem;
+                    }
+                }
+              &--formGroup{
+                &:not(:last-child){
+                    margin-bottom: 2rem;
+                }
+                input, textarea{
+                   width: 100%;
+                   padding: 2rem;
+                   font-size: 1.6rem;
+                   font-family:$font-roboto;
+                   border-radius: .5rem;
+                   outline: 0; //contorno
+                   box-sizing: border-box; //tamaño de caja: cuadro de borde
+                   //para que el padding no sobresalga
+                }
+              }  
+            }
+            &--btnBox{
+                width: 100%;
+            }
+        }
+    }
+    
+
+}

@@ -1,0 +1,43 @@
+.footer{
+    &__contenedor{
+        &__caja{
+            display: flex;
+            justify-content: space-between;
+                &--descri1{
+                    font-size: 1.5rem;
+                    font-family: $font-mont;
+                    color: #6c757d;
+                }
+                &--redes{
+                    text-align: center;
+                    a{
+                        &:not(:last-child){ //: no (: última hija) 
+                            margin-right: 2rem; //Margen derecha
+                        }
+                        i{
+                            font-size: 1.5rem;
+                            width: 4rem;
+                            height: 4rem;
+                            background-color: black;
+                            color: white;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                        }
+                    }
+
+                }
+                &--descri2{
+                    display: flex;
+                    gap: 20px;
+                    font-size: 1.5rem;
+                    font-family: $font-mont;
+                    color: #6c757d;
+
+                }
+        }
+        
+    }
+}

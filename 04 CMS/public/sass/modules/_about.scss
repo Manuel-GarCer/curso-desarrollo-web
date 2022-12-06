@@ -1,0 +1,118 @@
+.about{
+    &__contenedor{
+        &__timeline::before{ //before:antes de (con esto creamos contenido en css) 
+            content: ""; //no agregamos nada porque sera una linea
+            width: .2rem;
+            height: 100%;
+            display: inline-block;//bloque en linea para crear la linea
+            background-color: #e9ecef;
+            position: absolute; //por encima linea
+            // top, bottom, left, right; se activan con la position, siempre
+            left: 50%; //de izq a derecha mueve
+            transform: translateX(-50%); //trasladate en x 50%
+            @media only screen and (max-width: $bp-medium){
+                left: 4.6rem;  
+            }
+        }
+            
+        &__timeline{
+            position: relative;  //por detraz linea
+            &__item{
+                position: relative; //por detraz circulo
+                // height: 30rem;
+                // padding-bottom: 7rem;
+                &__imgBox{
+                    width: 15rem;
+                    height: 15rem;
+                    border: 6px solid #e9ecef;
+                    border-radius: 50%;
+                    overflow: hidden; //todo lo q sobresalga de imagen escondelo
+                    position: absolute; //por encima circulo
+                    left: 50%; //muevete de izq a derecha
+                    transform: translateX(-50%); //para centrar el circulo        
+                    img{
+                        width: 100%;
+                        // border-radius: 50%; tambien de esta forma se redondea
+                    }
+                    @media only screen and (max-width: $bp-large){
+                        width: 10rem;
+                        height: 10rem;  
+                    }
+                    @media only screen and (max-width: $bp-medium){
+                        width: 8rem;
+                        height: 8rem;
+                        left: 4.6rem;  
+                    }
+                
+                }
+                &__panel{
+                    width: 33%; //altura de paneles
+                    padding-bottom: 8rem;
+                    @media only screen and (max-width: $bp-medium){
+                        width: auto;
+                    }
+                
+                    h3{
+                        margin-bottom: 1rem;
+                    }
+                    p{
+                        font-size: 1.5rem;
+                    }
+                }
+                &:nth-child(odd){  //elementos impares
+                    .about__contenedor__timeline__item__panel{
+                        text-align: right; //alineación de texto: derecha
+                        margin-left: 6%; //Margen izquierda: 6%
+                        @media only screen and (max-width: $bp-medium){
+                            text-align: left;
+                            margin-left: 11rem;
+                        }
+                    }
+                }
+                &:nth-child(even){  //elementos pares
+                    display: flex;
+                    justify-content: flex-end;//justificar contenido: extremo flexible;
+                    .about__contenedor__timeline__item__panel{
+                        // margin-left: auto; //margen a la izquierda
+                        margin-right: 6%;
+                        @media only screen and (max-width: $bp-medium){
+                            margin-left: 11rem;
+                            margin-right: 0;
+                        }
+                     }
+                }
+            }
+            .lastItem{
+                height: 16.2rem; //con los bordes
+                @media only screen and (max-width: $bp-large){
+                    height: 11.2rem;
+                }
+                @media only screen and (max-width: $bp-medium){
+                    height: 9.2rem;
+                    
+                }
+                
+                div{
+                    background-color: #ffc800;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    p{
+                        color:white;
+                        font-family: $font-mont;
+                        font-size: 1.8rem;
+                        text-align: center;
+                        font-weight: 700;//peso de fuente: 700
+                        @media only screen and (max-width: $bp-large){
+                            font-size: 1.3rem;
+                            padding: 0 1.5rem; 
+                        }
+                        @media only screen and (max-width: $bp-medium){
+                            font-size: 1rem;  
+                        }
+                    }                   
+                }
+            }           
+        }
+    }
+}

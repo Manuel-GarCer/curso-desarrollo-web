@@ -60,7 +60,7 @@
                             <div class="mt-1">
                                 <a href="editar.php?id=<?php echo $fila['peli_id']; ?>" class="btn btn-success">editar</a>
                                 <!-- todo el editar y lo demas es para editar las peliculas -->
-                                <a href="#" class="btn btn-danger">borrar</a>
+                                <a href="borrar.php?delete=<?php echo $fila['peli_id']; ?>" class="btn btn-danger">borrar</a>
                             </div>
                         </div>
                 <?php }

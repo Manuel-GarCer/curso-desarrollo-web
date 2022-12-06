@@ -12,7 +12,7 @@
     <h1 class="text-center pt-5 pb-5 bg-primary ">Bienvenidos(as) a Pelicomic</h1>
     <section class="container">
         <div class="row p-4">
-            <a href="#" class="btn btn-success">Subir Pelicula</a>
+            <a href="subir.php" class="btn btn-success">Subir Pelicula</a>
             <a href="#" class="btn btn-info ml-2">Directores</a>
         </div>
         <div class="row">
@@ -30,7 +30,7 @@
                 // sumar();
             ?>
             <?php
-                $query = "SELECT a.peli_img, a.peli_nombre, CONCAT(b.dire_nombres, ' ', b.dire_apellidos) AS director, a.peli_restricciones FROM peliculas a INNER JOIN directores b ON a.peli_dire_id = b.dire_id";
+                $query = "SELECT a.peli_id, a.peli_img, a.peli_nombre, CONCAT(b.dire_nombres, ' ', b.dire_apellidos) AS director, a.peli_restricciones FROM peliculas a INNER JOIN directores b ON a.peli_dire_id = b.dire_id";
                 $query_res = mysqli_query($conexion, $query); //$query_res: respuesta
                 // print_r($query_res); con esto hacemos consulta q aparece en la pagina lo mas importante q nos devuelve que son 7 filas eso se ve en el cmd
                 $array1 = ['joshi', 213, false, [12, 13]];
@@ -49,16 +49,17 @@
                     // echo "<br>"; uno debajo de otro
                     ?>
                         <div class="col-md-3 col-sm-6 mb-4">
-                            <img src="https://www.ecartelera.com/carteles/15800/15882/005_m.jpg" alt="" width="100%">
-                            <h4 class="text-info">Spiderman: No way home</h4>
+                            <img src="<?php echo $fila['peli_img']; ?>" alt="" width="100%">
+                            <h4 class="text-info">"<?php echo $fila['peli_nombre']; ?>"</h4>
                             <div>
-                                <strong>Director: </strong>Jon Wants
+                                <strong>Director: </strong>"<?php echo $fila['director']; ?>"
                             </div>
                             <div>
-                                <strong>Rating: </strong> PG-16
+                                <strong>Rating: </strong>"<?php echo $fila['peli_restricciones']; ?>"
                             </div>
                             <div class="mt-1">
-                                <a href="#" class="btn btn-success">editar</a>
+                                <a href="editar.php?id=<?php echo $fila['peli_id']; ?>" class="btn btn-success">editar</a>
+                                <!-- todo el editar y lo demas es para editar las peliculas -->
                                 <a href="#" class="btn btn-danger">borrar</a>
                             </div>
                         </div>

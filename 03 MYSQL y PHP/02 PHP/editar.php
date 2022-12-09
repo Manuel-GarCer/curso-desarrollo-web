@@ -61,13 +61,15 @@
                                     ?>
                                     <option value="<?php echo $dire_id; ?>" selected>
                                         <?php echo $director; ?>
-                                    </option>
+                                    </option> 
+                                <!-- si el id de la consulta al iterar es igual al id del director entonces selected seleccionado por defecto -->
                                 <?php }
                                 else {
                                     ?>
                                     <option value="<?php echo $dire_id; ?>">
                                         <?php echo $director; ?>
                                     </option>
+                                <!-- sino es asi muestra no seleccionado -->
                                 <?php }
                             }
                         ?>

@@ -8,3 +8,7 @@
     mysqli_query($conexion, $query);
     header('Location: ./');
 ?>
+
+<!-- POST : enviar algo al servidor para que lo guarde, se ejecuta siempre en un formulario -->
+
+<!-- GET: obtener algo -->

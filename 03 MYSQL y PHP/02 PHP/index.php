@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1 class="text-center pt-5 pb-5 bg-primary ">Bienvenidos(as) a Pelicomic</h1>
+    <h1 class="text-center pt-5 pb-5 bg-primary text-white ">Bienvenidos(as) a Pelicomic</h1>
     <section class="container">
         <div class="row p-4">
             <a href="subir.php" class="btn btn-success">Subir Pelicula</a>
-            <a href="#" class="btn btn-info ml-2">Directores</a>
+            <a href="directores.php" class="btn btn-info ml-2">Directores</a>
         </div>
         <div class="row">
             <?php

@@ -98,7 +98,7 @@ UPDATE peliculas SET peli_dire_id = 5 WHERE peli_id = 6;
 UPDATE peliculas SET peli_dire_id = 6 WHERE peli_id = 10;
 UPDATE peliculas SET peli_dire_id = 7 WHERE peli_id = 11;
 
---Updata: actualizar, SER: establece WHERE: donde
+--Updata: actualizar, SET: establece WHERE: donde
 
 SELECT *
     FROM peliculas a, directores b

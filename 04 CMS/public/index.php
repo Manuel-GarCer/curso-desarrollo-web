@@ -1,5 +1,7 @@
 <?php require_once("../resources/config.php"); ?>
+<!-- require_once: requiere solo una vez y cierra al toque esa conexion(la ruta de acceso lo definimos) -->
 <?php include(VIEW_FRONT . DS . "head.php"); ?>
+<!-- incluye desde la carpeta FRONT a el archivo head.php(su ruta para llegar ahí) -->
 
     <?php include(VIEW_FRONT . DS . "nav.php"); ?>
   

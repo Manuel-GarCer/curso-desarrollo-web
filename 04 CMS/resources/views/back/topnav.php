@@ -161,15 +161,18 @@
             </a>
             <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
         </div>
-    </li>
 
+    </li>
     <div class="topbar-divider d-none d-sm-block"></div>
+    <li class="nav-item">
+        <a href="../" class="nav-link text-gray-600">AGENCIA</a>
+    </li>
 
     <!-- Nav Item - User Information -->
     <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION ['user_nombres'] . " " . $_SESSION ['user_apellidos']; ?></span>
             <img class="img-profile rounded-circle"
                 src="img/undraw_profile.svg">
         </a>

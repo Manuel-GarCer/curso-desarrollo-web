@@ -1,3 +1,15 @@
+<?php
+    if(!isset($_SESSION["user_rol"])){
+        redirect("../");
+    }
+    if($_SESSION["user_rol"] != "admin"){
+        redirect("../");
+    }
+    if(!isset($_COOKIE["email"])){
+        redirect("../");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

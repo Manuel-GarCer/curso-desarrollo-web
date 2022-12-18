@@ -2,6 +2,8 @@
     ob_start();
 
     session_start(); //para que ejecute variables de session universales
+    //session_destroy(); //elimina todo el inicio de sesion
+
     //echo DIRECTORY_SEPARATOR;
     //para definir el DS osea / o \
     //defined es una cons pero en php y es en mayusculas esta

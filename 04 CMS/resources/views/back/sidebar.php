@@ -32,6 +32,17 @@
         <span>Header</span></a>
 </li>
 
+<li class="nav-item">
+    <a class="nav-link" href="index.php?portafolio">
+        <i class="fas fa-thumbs-up"></i>
+        <span>Portafolio</span></a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="index.php?contacto">
+        <i class="fas fa-address-card"></i>
+        <span>Contacto</span></a>
+</li>
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">

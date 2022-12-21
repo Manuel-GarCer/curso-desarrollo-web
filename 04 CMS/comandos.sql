@@ -52,3 +52,15 @@ CREATE TABLE portafolio (
 INSERT INTO portafolio (por_user_id, por_titulo, por_subtitulo, por_imgSmall, por_imgLarge, por_contenido, por_fecha, por_status) VALUES
     (1, 'Threads', 'Illustration', '01-thumbnail.jpg', '01-full.jpg', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nulla eos explicabo quidem nesciunt quod ipsa laborum numquam, provident ab consectetur atque consequatur porro, molestias, alias at. Accusamus, iste voluptas!', NOW(), 'publicado');
     --NOW(nos da la fecha de la pc sea diferente en Lima que USA)
+
+CREATE TABLE contacto (
+    con_id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    con_user_id INT NOT NULL,
+    con_nombre VARCHAR(100) NOT NULL,
+    con_correo VARCHAR(50) NOT NULL,
+    con_telefono VARCHAR(20) NOT NULL,
+    con_mensaje TEXT NOT NULL,
+    con_status VARCHAR(20) NOT NULL,
+);
+
+INSERT INTO contacto (con_user_id, con_nombre, con_correo, con_telefono, con_mensaje) VALUES (1, "Hector Juan Perez Martinez", "hector@gmail.com", "97000987", "Muy organizada su pagina web, felicitaciones", "publicado");

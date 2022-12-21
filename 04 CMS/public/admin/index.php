@@ -25,6 +25,18 @@
                             //echo "aqui cargare el modulo header";
                             include(VIEW_BACK . DS . "header.php");
                         }
+                        if(isset($_GET['portafolio'])){
+                            //echo "aqui cargare el modulo portafolio";
+                            include(VIEW_BACK . DS . "portafolio.php");
+                        }
+                        if(isset($_GET['portafolio_add'])){
+                            //echo "aqui cargare el modulo portafolio";
+                            include(VIEW_BACK . DS . "portafolio_add.php");
+                        }
+                        if(isset($_GET['contacto'])){
+                            //echo "aqui cargare el modulo contacto";
+                            include(VIEW_BACK . DS . "contacto.php");
+                        }
                     ?>
                 </div>
                 <!-- /.container-fluid -->

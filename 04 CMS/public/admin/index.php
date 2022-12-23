@@ -29,10 +29,16 @@
                             //echo "aqui cargare el modulo portafolio";
                             include(VIEW_BACK . DS . "portafolio.php");
                         }
-                        if(isset($_GET['portafolio_add'])){
-                            //echo "aqui cargare el modulo portafolio";
-                            include(VIEW_BACK . DS . "portafolio_add.php");
+                        if(isset($_GET['portafolio_pendiente'])){
+                            include(VIEW_BACK . DS . "portafolio_pendiente.php");                           
                         }
+                        if(isset($_GET['portafolio_add'])){
+                            include(VIEW_BACK . DS . "portafolio_add.php");                           
+                        }
+                        if(isset($_GET['portafolio_edit'])){                            
+                            include(VIEW_BACK . DS . "portafolio_edit.php");                           
+                        }
+
                         if(isset($_GET['contacto'])){
                             //echo "aqui cargare el modulo contacto";
                             include(VIEW_BACK . DS . "contacto.php");

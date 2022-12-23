@@ -9,19 +9,19 @@
                 <!-- enctype="multipart/form-data": tipo de codificador = multiparte/datos de formulario (para que acepte subir cualquier archivo como una img)  -->
                     <div class="form-group">
                         <label for="por_titulo">Título</label>
-                        <input type="text" class="form-control" id="por_titulo" name="por_titulo">
+                        <input type="text" class="form-control" id="por_titulo" name="por_titulo" required> 
                     </div>
                     <div class="form-group">
                         <label for="por_subtitulo">Subtítulo</label>
-                        <input type="text" class="form-control" id="por_subtitulo" name="por_subtitulo">
+                        <input type="text" class="form-control" id="por_subtitulo" name="por_subtitulo" required>
                     </div>
                     <div class="form-group">
                         <label for="por_imgSmall">Imagen Small</label>
-                        <input type="file" name="img[]" id="por_imgSmall" class="form-control">
+                        <input type="file" name="img[]" id="por_imgSmall" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="por_imgLarge">Imagen Large</label>
-                        <input type="file" name="img[]" id="por_imgLarge" class="form-control">
+                        <input type="file" name="img[]" id="por_imgLarge" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="por_contenido">Contenido</label>
@@ -45,3 +45,4 @@
         </div>
     </div>
 </div>
+

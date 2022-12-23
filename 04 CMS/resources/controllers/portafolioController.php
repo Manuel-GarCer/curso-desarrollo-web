@@ -1,7 +1,7 @@
 <?php
     // ⚡⚡ FRONT
     function get_portafolio_front(){
-        $query = query("SELECT por_id, por_titulo, por_subtitulo, por_imgSmall FROM portafolio WHERE por_status = 'publicado' AND por_delete = 1 ORDER BY por_fecha DESC");
+        $query = query("SELECT por_id, por_titulo, por_subtitulo, por_imgSmall FROM portafolio WHERE por_status = 'publicado' AND por_delete = 1 ORDER BY por_id DESC");
         confirm($query);
         while($fila = fetch_array($query)){
             $item = <<<DELIMITADOR
@@ -21,9 +21,35 @@ DELIMITADOR;
             echo $item;
         }
     }
+    //AMBOS
+    function get_portafolio_item($urlParam){
+        if(isset($_GET["{$urlParam}"])){
+            $id = limpiar_string(trim($_GET["{$urlParam}"]));
+            //echo $id;
+            $query = query("SELECT * FROM portafolio WHERE por_id = {$id} AND por_user_id = {$_SESSION['user_id']}");
+            confirm($query);
+            return fetch_array($query);
+        }
+    } 
+
+
+
+
     // ⚡⚡ BACK
-    function get_portafolio_back(){
-        $query = query("SELECT * FROM portafolio WHERE por_status = 'publicado' AND por_delete = 1 ORDER BY por_fecha DESC");
+
+    function get_statusItem($status){
+        if($status == "publicado"){
+            ?>
+            <option value="pendiente">pendiente</option>
+            <?php }
+        else {
+            ?>
+            <option value="publicado">publicado</option>
+            <?php }
+        }
+    
+    function get_portafolio_back($status){
+        $query = query("SELECT * FROM portafolio WHERE por_status = '{$status}' AND por_delete = 1 ORDER BY por_id DESC");
         confirm($query);
         while($fila = fetch_array($query)){
             $item = <<<DELIMITADOR
@@ -39,7 +65,7 @@ DELIMITADOR;
                     <td>{$fila['por_status']}</td>
                     <td>{$fila['por_vistas']}</td>
                     <td>
-                        <a href="#" class="btn btn-small btn-info">editar</a>
+                        <a href="index.php?portafolio_edit={$fila['por_id']}" class="btn btn-small btn-info">editar</a>
                     </td>
                     <td>
                         <a href="#" class="btn btn-small btn-danger">borrar</a>
@@ -66,7 +92,44 @@ DELIMITADOR;
                 move_uploaded_file($_FILES['img']['tmp_name'][$i], "../img/portafolio/{$arrayImgsNombres[$i]}");
                 //para subir imagenes usamos dos parametros, el archivo alojamiento temporal y a donde lo subimos la ruta y para eso pasamos el nombre de la imagen
             }
-            print_r($arrayImgsNombres);
+            //print_r($arrayImgsNombres);
+
+            //a continuación hacemos el query para subir info a la pagina del portafolio:
+            $query = query("INSERT INTO portafolio (por_user_id, por_titulo, por_subtitulo, por_imgSmall, por_imgLarge, por_contenido, por_fecha, por_status) VALUES ({$_SESSION['user_id']}, '{$por_titulo}', '{$por_subtitulo}', '{$arrayImgsNombres[0]}', '{$arrayImgsNombres[1]}', '{$por_contenido}', NOW(), '{$por_status}')");
+            confirm($query);
+            set_mensaje(display_msj("Item agregado correctamente", "success"));
+            redirect("index.php?portafolio");
         }
+    }
+    function post_portafolio_edit($id, $imgSmall, $imgLarge){
+        if(isset($_POST['editar'])){
+                //echo "funciona";
+            $por_titulo = limpiar_string(trim($_POST['por_titulo']));
+            $por_subtitulo = limpiar_string(trim($_POST['por_subtitulo']));
+            $por_contenido = limpiar_string(trim($_POST['por_contenido']));
+            $por_status = limpiar_string(trim($_POST['por_status']));
+
+            $arrayImgNombres =[];
+            $imgGuardadas = [$imgSmall,$imgLarge];
+            //print_r($imgGuardadas);
+            for($i = 0; $i < 2; $i++){
+                //echo $_FILES["img"]["name"][$i];
+                if($_FILES["img"]["name"][$i] != ""){
+                    //para almacenar nuevaimagen lo siguiente (parecido a subir imagenes)
+                    $arrayImgsNombres[$i] = md5(uniqid()) . "." . explode(".", $_FILES['img']['name'][$i])[1];
+                    move_uploaded_file($_FILES['img']['tmp_name'][$i], "../img/portafolio/{$arrayImgsNombres[$i]}");
+                    $imgLocation = "../img/portafolio/{$imgGuardadas[$i]}";
+                    unlink($imgLocation); //para borrar la anterior imagen por eso unlink
+                } else { //y si no mantenemos la misma imagen sino seleccionamos una nueva asi:
+                    $arrayImgsNombres[$i] = $imgGuardadas[$i];
+                }
+            }
+            //print_r($arrayImgsNombres);
+            $query = query("UPDATE portafolio SET por_titulo = '{$por_titulo}', por_subtitulo = '{$por_subtitulo}', por_imgSmall = '{$arrayImgsNombres[0]}', por_imgLarge = '{$arrayImgsNombres[1]}', por_contenido = '{$por_contenido}', por_status = '{$por_status}' WHERE por_id = {$id}");
+            confirm($query);
+            set_mensaje(display_msj("Item editado correctamente", "success"));
+            redirect("index.php?portafolio_edit={$id}");
+        }
+
     }
 ?>

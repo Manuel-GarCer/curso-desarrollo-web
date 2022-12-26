@@ -50,6 +50,7 @@
                     </tr> -->
                 </tbody>
             </table>
+            <?php post_deleteItem(); ?>
         </div>
     </div>
 </div>

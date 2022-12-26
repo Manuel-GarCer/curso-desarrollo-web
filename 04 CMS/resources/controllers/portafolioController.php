@@ -21,10 +21,23 @@ DELIMITADOR;
             echo $item;
         }
     }
+
+    function get_portafolioItem_front() {
+        if(isset($_GET["id"])){
+            $id = limpiar_string(trim($_GET["id"]));
+            $query = query("UPDATE portafolio SET por_vistas = por_vistas + 1 WHERE por_id = {$id}");
+            confirm($query);
+            $query = query("SELECT * FROM portafolio a INNER JOIN usuarios b ON a.por_user_id = b.user_id WHERE por_id = {$id}");
+            confirm($query);
+            return fetch_array($query);
+        }
+    }
+
+
     //AMBOS
     function get_portafolio_item($urlParam){
         if(isset($_GET["{$urlParam}"])){
-            $id = limpiar_string(trim($_GET["{$urlParam}"]));
+            $id = limpiar_string(trim($_GET["{$urlParam}"]));  
             //echo $id;
             $query = query("SELECT * FROM portafolio WHERE por_id = {$id} AND por_user_id = {$_SESSION['user_id']}");
             confirm($query);
@@ -68,7 +81,7 @@ DELIMITADOR;
                         <a href="index.php?portafolio_edit={$fila['por_id']}" class="btn btn-small btn-info">editar</a>
                     </td>
                     <td>
-                        <a href="#" class="btn btn-small btn-danger">borrar</a>
+                        <a href="javascript:void(0)" class="btn btn-small btn-danger delete_link" rel="{$fila['por_id']}">borrar</a>
                     </td>
                 </tr>
 DELIMITADOR;
@@ -130,6 +143,17 @@ DELIMITADOR;
             set_mensaje(display_msj("Item editado correctamente", "success"));
             redirect("index.php?portafolio_edit={$id}");
         }
+    }
 
+    function post_deleteItem(){
+        if(isset($_GET["delete"])){
+            //echo "si esta el parametro de url";
+            $id = limpiar_string(trim($_GET["delete"]));
+            $query = query("UPDATE portafolio SET por_delete = 0 WHERE por_id = {$id}");
+            confirm($query);
+            set_mensaje(display_msj("Elemanto Eliminado correctamente", "warning"));
+            redirect("index.php?portafolio");
+            
+        }
     }
 ?>

@@ -53,14 +53,27 @@ INSERT INTO portafolio (por_user_id, por_titulo, por_subtitulo, por_imgSmall, po
     (1, 'Threads', 'Illustration', '01-thumbnail.jpg', '01-full.jpg', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nulla eos explicabo quidem nesciunt quod ipsa laborum numquam, provident ab consectetur atque consequatur porro, molestias, alias at. Accusamus, iste voluptas!', NOW(), 'publicado');
     --NOW(nos da la fecha de la pc sea diferente en Lima que USA)
 
-CREATE TABLE contacto (
-    con_id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    con_user_id INT NOT NULL,
-    con_nombre VARCHAR(100) NOT NULL,
-    con_correo VARCHAR(50) NOT NULL,
-    con_telefono VARCHAR(20) NOT NULL,
-    con_mensaje TEXT NOT NULL,
-    con_status VARCHAR(20) NOT NULL,
+CREATE TABLE comentarios (
+    com_id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    com_user_id INT NOT NULL,
+    com_por_id INT NOT NULL,
+    com_mensaje VARCHAR(100) NOT NULL,
+    com_fecha DATETIME NOT NULL,
+    con_status TINYINT DEFAULT 0 NOT NULL COMMENT "0: pendiente, 1: aprobado"
 );
 
-INSERT INTO contacto (con_user_id, con_nombre, con_correo, con_telefono, con_mensaje) VALUES (1, "Hector Juan Perez Martinez", "hector@gmail.com", "97000987", "Muy organizada su pagina web, felicitaciones", "publicado");
+
+
+
+
+-- CREATE TABLE contacto (
+--     con_id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+--     con_user_id INT NOT NULL,
+--     con_nombre VARCHAR(100) NOT NULL,
+--     con_correo VARCHAR(50) NOT NULL,
+--     con_telefono VARCHAR(20) NOT NULL,
+--     con_mensaje TEXT NOT NULL,
+--     con_status VARCHAR(20) NOT NULL,
+-- );
+
+-- INSERT INTO contacto (con_user_id, con_nombre, con_correo, con_telefono, con_mensaje) VALUES (1, "Hector Juan Perez Martinez", "hector@gmail.com", "97000987", "Muy organizada su pagina web, felicitaciones", "publicado");

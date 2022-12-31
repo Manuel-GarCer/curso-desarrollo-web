@@ -39,6 +39,12 @@
 </li>
 
 <li class="nav-item">
+    <a class="nav-link" href="index.php?comentarios">
+        <i class="fas fa-comments"></i>
+        <span>Comentarios</span></a>
+</li>
+
+<li class="nav-item">
     <a class="nav-link" href="index.php?contacto">
         <i class="fas fa-address-card"></i>
         <span>Contacto</span></a>

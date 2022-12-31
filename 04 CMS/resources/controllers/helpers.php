@@ -69,5 +69,11 @@ DELIMITADOR;
         }
         return false;
     }
-    
+    // FUNCION PARA APROBAR, DESAPROBAR O DESACTIVAR UN ELEMENTO
+    function post_validacionElemento($status, $table, $campo, $camp_id, $id){
+        $query = query("UPDATE {$table} SET {$campo} = {$status} WHERE {$camp_id} = {$id}");
+        confirm($query);
+        set_mensaje(display_msj("El cambio se ejecuto correctamente", "success"));
+        redirect("index.php?{$table}");
+    }
 ?>

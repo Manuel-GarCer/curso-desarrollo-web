@@ -27,6 +27,21 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
+const obtenerJson = async function(phpFileGet){
+  try {
+    const data = await fetch(phpFileGet);
+    const res = await data.json();
+    console.log(res);
+  } catch (error){
+    console.log(error);
+  }
+}
+
+const render = async function(){
+  await obtenerJson("backFech/getVistasPorItem.php")
+}
+render();
+
 // Area Chart Example
 var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {

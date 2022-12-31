@@ -6,5 +6,7 @@
     require_once("controllers/loginController.php");
     require_once("controllers/portafolioController.php");
     require_once("controllers/comentariosController.php");
+    require_once("controllers/dashboardController.php");
     require_once("controllers/contactoController.php")
+
 ?>

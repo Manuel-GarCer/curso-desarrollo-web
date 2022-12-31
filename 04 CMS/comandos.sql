@@ -59,21 +59,22 @@ CREATE TABLE comentarios (
     com_por_id INT NOT NULL,
     com_mensaje VARCHAR(100) NOT NULL,
     com_fecha DATETIME NOT NULL,
-    con_status TINYINT DEFAULT 0 NOT NULL COMMENT "0: pendiente, 1: aprobado"
+    com_status TINYINT DEFAULT 0 NOT NULL COMMENT "0: pendiente, 1: aprobado"
 );
 
+SELECT SUM(por_vistas) FROM portafolio; WHERE por_user_id;
+
+SELECT * FROM portafolio a INNER JOIN comentarios b ON a.por_id = b.com_por_id WHERE a.por_user_id;
 
 
 
+CREATE TABLE contacto (
+    cont_nombre VARCHAR(100) NOT NULL,
+    cont_correo VARCHAR(50) NOT NULL,
+    cont_telefono VARCHAR(20) NOT NULL,
+    cont_mensaje VARCHAR(300) NOT NULL,
+    cont_fecha DATETIME NOT NULL,
+    cont_delete TINYINT DEFAULT 1 COMMENT "0: desactivado, 1:activo"
+);
 
--- CREATE TABLE contacto (
---     con_id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
---     con_user_id INT NOT NULL,
---     con_nombre VARCHAR(100) NOT NULL,
---     con_correo VARCHAR(50) NOT NULL,
---     con_telefono VARCHAR(20) NOT NULL,
---     con_mensaje TEXT NOT NULL,
---     con_status VARCHAR(20) NOT NULL,
--- );
-
--- INSERT INTO contacto (con_user_id, con_nombre, con_correo, con_telefono, con_mensaje) VALUES (1, "Hector Juan Perez Martinez", "hector@gmail.com", "97000987", "Muy organizada su pagina web, felicitaciones", "publicado");
+INSERT INTO contacto (cont_nombre, cont_correo, cont_telefono, cont_mensaje) VALUES (1, "Hector Juan Perez Martinez", "hector@gmail.com", "97000987", "Muy organizada su pagina web, felicitaciones");

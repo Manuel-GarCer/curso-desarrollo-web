@@ -2,7 +2,7 @@
         <div class="portada__contenedor contenedor">
             <h1 class="hidden">Blog de agencia</h1> <!--hidden: escondido del titulo para q lo busque google (seo) -->
             <!-- <?php
-                //$query = "SELCT * FROM  header";
+                //$query = "SELECT * FROM  header";
                 // function query($consulta){
                 //     global $conexion;
                 //     return mysqli_query ($conexion, $consulta);

@@ -31,23 +31,27 @@ const obtenerJson = async function(phpFileGet){
   try {
     const data = await fetch(phpFileGet);
     const res = await data.json();
-    console.log(res);
-  } catch (error){
+    return res.resultado;
+  } catch (error) {
     console.log(error);
   }
 }
 
 const render = async function(){
-  await obtenerJson("backFech/getVistasPorItem.php")
-}
-render();
+  const data = await obtenerJson('backFetch/getVistasPorItem.php');
+  //console.log(data);
+  const titulos = data.map(el => el.por_titulo);
+  //console.log(titulos);
+  const vistas = data.map(el => el.por_vistas);
+  //console.log(vistas);
 
-// Area Chart Example
+  // Area Chart Example
 var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    // labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: titulos,
     datasets: [{
       label: "Earnings",
       lineTension: 0.3,
@@ -61,7 +65,8 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+      // data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+      data: vistas,
     }],
   },
   options: {
@@ -93,7 +98,7 @@ var myLineChart = new Chart(ctx, {
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return number_format(value);
           }
         },
         gridLines: {
@@ -125,9 +130,13 @@ var myLineChart = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+          return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
         }
       }
     }
   }
 });
+}
+render();
+
+

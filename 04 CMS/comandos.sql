@@ -62,11 +62,10 @@ CREATE TABLE comentarios (
     com_status TINYINT DEFAULT 0 NOT NULL COMMENT "0: pendiente, 1: aprobado"
 );
 
-SELECT SUM(por_vistas) FROM portafolio; WHERE por_user_id;
+SELECT * FROM portafolio;
+SELECT SUM(por_vistas) FROM portafolio WHERE por_user_id = 1;
 
-SELECT * FROM portafolio a INNER JOIN comentarios b ON a.por_id = b.com_por_id WHERE a.por_user_id;
-
-
+SELECT * FROM portafolio a INNER JOIN comentarios b ON a.por_id = b.com_por_id WHERE a.por_user_id = 1
 
 CREATE TABLE contacto (
     cont_nombre VARCHAR(100) NOT NULL,

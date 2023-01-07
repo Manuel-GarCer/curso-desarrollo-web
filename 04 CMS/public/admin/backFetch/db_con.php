@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $conexion = mysqli_conncet("localhost", "root", "", "agencia");
+    $conexion = mysqli_connect('localhost', 'root', '', 'agencia');
     mysqli_set_charset($conexion, "utf8");
 
     function query($sql){

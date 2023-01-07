@@ -5,25 +5,24 @@
             <form class="contacto__contenedor__form" method="post">
                 <div class="contacto__contenedor__form__col">
                     <div class="contacto__contenedor__form__col--formGroup">
-                        <input type="text" name="cont_nombre" placeholder="Tu Nombre*">
+                        <input type="text" name="cont_nombre" placeholder="Tu Nombre*" required>
                     </div>
                     <div class="contacto__contenedor__form__col--formGroup">
-                        <input type="email" name="cont_correo" placeholder="Tu Correo*">
+                        <input type="email" name="cont_correo" placeholder="Tu Correo*" required>
                     </div>
                     <div class="contacto__contenedor__form__col--formGroup">
-                        <input type="text" name="cont_telefono" placeholder="Tu Telefono*">
+                        <input type="text" name="cont_telefono" placeholder="Tu Telefono*" required>
                     </div>
                 </div>
                 <div class="contacto__contenedor__form__col">
                     <div class="contacto__contenedor__form__col--formGroup height-100">
-                        <textarea cols="30" rows="5" name="cont_mensaje" placeholder="Tu Mensaje*" class="height-100"></textarea>
+                        <textarea cols="30" rows="5" name="cont_mensaje" placeholder="Tu Mensaje*"  class="height-100" required ></textarea>
                         <!-- cols:columnas, rows:filas, placeholder: un mensaje -->
                     </div>
                 </div>
                 <div class="contacto__contenedor__form--btnBox text-center mt-5">
                     <input type="submit" name="enviar" value="enviar mensaje" class="btn btn-amarillo">
                     <!-- type: submit para que aparezca boton  -->
-                    <?php display_msj(); ?>
                     <?php post_contacto(); ?>
                 </div>
             </form>

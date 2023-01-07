@@ -11,11 +11,39 @@
             
             $query = query("INSERT INTO contacto(cont_nombre, cont_correo, cont_telefono, cont_mensaje, cont_fecha) VALUES ('{$cont_nombre}', '{$cont_correo}', '{$cont_telefono}', '{$cont_mensaje}', NOW())");
             confirm($query);
-            set_mensaje(display_msj("tu mensaje fue enviado correctamente", "success"));
             redirect("./");
 
             
         }
     }
     // BACK
+
+    function get_contacto(){
+        $query = query("SELECT * FROM contacto");
+        confirm($query);
+        while($fila = fetch_array($query)){ 
+        $item = <<<DELIMITADOR
+        <tr>
+                        <td>{$fila["cont_nombre"]}</td>
+                        <td>{$fila["cont_correo"]}</td>
+                        <td>{$fila["cont_telefono"]}</td>
+                        <td style="widht: 40%">
+                            {$fila["cont_mensaje"]}
+                        </td>
+                        <td> {$fila["cont_fecha"]}</td>
+                        <td>
+                            <a href="javascript:void(0)" class="btn btn-small btn-success delete_link" titulo="Borrar comentario" action="delete" table="comentarios" rel="{$fila['cont_delete']} param="delete">Borrar</a>
+                        </td>
+                    </tr>
+DELIMITADOR;
+        echo $item;
+    }
+
+
+
+    }
+
+    
+
+
 ?>
